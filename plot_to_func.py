@@ -109,7 +109,15 @@ class PlotToFunc(QMainWindow, Ui_MainWindow):
         self.funcEdit.setText(eq)
 
     def square_func(self, x1, y1, x2, y2, x3, y3):
-        pass
+        try:
+            a = round((y3 - ((x3 * (y2 - y1) + x2 * y1 - x1 * y2) / (x2 - x1))) / (x3 * (x3 - x1 - x2) + x1 * x2), 2)
+            b = round((y2 - y1) / (x2 - x1) - a * (x1 + x2), 2)
+            c = round((x2 * y1 - x1 * y2) / (x2 - x1) + a * x1 * x2, 2)
+        except ZeroDivisionError:
+            self.funcEdit.setText('Невозможно вычислить: деление на ноль')
+            return
+
+        self.funcEdit.setText('a: {0}, b: {1}, c: {2}'.format(a, b, c))
 
     def sqrt_func(self, x, y):
         a, xs = 0, []

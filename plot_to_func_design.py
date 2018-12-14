@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
         font.setFamily("Arial")
         font.setPointSize(12)
         self.radioButton_4.setFont(font)
-        self.radioButton_4.setCheckable(False)
+        self.radioButton_4.setCheckable(True)
         self.radioButton_4.setObjectName("radioButton_4")
         self.gridLayout.addWidget(self.radioButton_4, 0, 1, 1, 1)
         self.radioButton_3 = QtWidgets.QRadioButton(self.gridLayoutWidget)
