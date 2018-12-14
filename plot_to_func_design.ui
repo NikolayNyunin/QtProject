@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>600</height>
+    <height>710</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>50</y>
+      <y>80</y>
       <width>521</width>
       <height>251</height>
      </rect>
@@ -28,9 +28,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>320</y>
+      <y>350</y>
       <width>521</width>
-      <height>111</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="font">
@@ -40,8 +40,8 @@
      </font>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QRadioButton" name="radioButton">
+     <item row="2" column="1">
+      <widget class="QRadioButton" name="radioButton_5">
        <property name="font">
         <font>
          <family>Arial</family>
@@ -49,10 +49,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Прямая (отрезок)</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
+        <string>Кубическая функция</string>
        </property>
       </widget>
      </item>
@@ -69,7 +66,52 @@
        </property>
       </widget>
      </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="radioButton_6">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Синус</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="radioButton">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Прямая (по двум точкам)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="1">
+      <widget class="QRadioButton" name="radioButton_4">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Квадратичная функция</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
       <widget class="QRadioButton" name="radioButton_3">
        <property name="font">
         <font>
@@ -82,46 +124,15 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QRadioButton" name="radioButton_4">
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Квадратичная функция</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="startButton">
+   <widget class="QLineEdit" name="funcEdit">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>440</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Начать</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>520</y>
-      <width>521</width>
-      <height>51</height>
+      <x>150</x>
+      <y>640</y>
+      <width>411</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -136,10 +147,10 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>170</x>
       <y>10</y>
-      <width>521</width>
-      <height>31</height>
+      <width>391</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -149,19 +160,6 @@
      </font>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Цвет графика:</string>
-       </property>
-      </widget>
-     </item>
      <item>
       <widget class="QRadioButton" name="white">
        <property name="font">
@@ -221,6 +219,99 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>105</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Цвет графика:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delButton">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>500</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Очистить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>650</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Функция:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="coordsEdit">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>570</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>580</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Текущие координаты:</string>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
